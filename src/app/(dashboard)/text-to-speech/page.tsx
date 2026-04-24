@@ -1,4 +1,4 @@
-import { TextToSpeechView } from "@/features/dashboard/text-to-speech/views/text-to-speech-view";
+import { TextToSpeechView } from "@/features/text-to-speech/views/text-to-speech-view";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

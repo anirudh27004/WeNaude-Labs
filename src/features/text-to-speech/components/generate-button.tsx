@@ -23,7 +23,7 @@ export function GenerateButton({
         onClick={onSubmit}
         disabled={disabled}
         >
-            {!isSubmitting ? (
+            {isSubmitting ? (
                 <>
                     <Spinner className="size-3"/>
                     Generating...
