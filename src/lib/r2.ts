@@ -11,12 +11,12 @@ import { string } from "zod";
 import { detectContentType } from "next/dist/server/image-optimizer";
 
 const r2 = new S3Client({
-region: "auto",
-endpoint: 'httpx://${env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com',
-credentials: {
-    accessKeyId:env.R2_ACCESS_KEY_ID,
-    secretAccessKey: env.R2_SECRET_ACCESS_KEY,
-},
+    region: "auto",
+    endpoint: `https://${env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
+    credentials: {
+        accessKeyId: env.R2_ACCESS_KEY_ID,
+        secretAccessKey: env.R2_SECRET_ACCESS_KEY,
+    },
 });
 
 type UploadAudioOptions = {
