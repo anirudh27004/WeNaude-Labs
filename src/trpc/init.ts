@@ -1,8 +1,10 @@
 import { initTRPC, TRPCError } from '@trpc/server';
+import type { FetchCreateContextFnOptions } from '@trpc/server/adapters/fetch';
 import { cache } from 'react';
 import { auth } from "@clerk/nextjs/server"
 import superjson from 'superjson';
-export const createTRPCContext = {};
+
+export const createTRPCContext = cache((_opts: FetchCreateContextFnOptions) => ({}));
 
 // Avoid exporting the entire t-object
 // since it's not very descriptive.
