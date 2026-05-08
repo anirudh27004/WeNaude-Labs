@@ -7,8 +7,7 @@ import {
 
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { env } from "./env";
-import { string } from "zod";
-import { detectContentType } from "next/dist/server/image-optimizer";
+
 
 const r2 = new S3Client({
     region: "auto",
