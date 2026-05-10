@@ -7,7 +7,7 @@ import { TextInputPanel } from "@/features/text-to-speech/components/text-input-
 import { SettingsPanel } from "@/features/text-to-speech/components/settings-panel";
 import {
   TextToSpeechForm,
-  type TTSFromValues
+  type TTSFormValues
 } from "@/features/text-to-speech/components/text-to-speech-form";
 import { TTSVoicesProvider } from "../contexts/tts-voices-context";
 import { VoicePreviewPanel } from "../components/voice-preview-panel";
@@ -42,7 +42,7 @@ export function TextToSpeechDetailView({
       ? data.voiceId
       : fallbackVoiceId;
 
-  const defaultValues: TTSFromValues = {
+  const defaultValues: TTSFormValues = {
     text: data.text,
     voiceId: resolvedVoiceId,
     temperature: data.temperature,

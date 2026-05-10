@@ -10,7 +10,7 @@ import { SettingsPanel } from "../components/settings-panel";
 import {
     TextToSpeechForm,
     defaultTTSValues,
-    type TTSFromValues
+    type TTSFormValues
 } from "../components/text-to-speech-form";
 import { TTSVoicesProvider } from "../contexts/tts-voices-context";
 
@@ -18,7 +18,7 @@ export function TextToSpeechView({
     initialValues,
     voiceCategory,
 }:{
-    initialValues?: Partial<TTSFromValues>;
+    initialValues?: Partial<TTSFormValues>;
     voiceCategory?: string;
 }) {
     const trpc = useTRPC();
@@ -41,7 +41,7 @@ export function TextToSpeechView({
     ? initialValues.voiceId
     : fallbackVoiceId;
 
-    const defaultValues: TTSFromValues = {
+    const defaultValues: TTSFormValues = {
         ...defaultTTSValues,
         ...initialValues,
         voiceId: resolvedVoiceId,
